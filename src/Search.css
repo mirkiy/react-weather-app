@@ -1,0 +1,18 @@
+#city-current {
+  margin-right: 10px;
+  width: 35px;
+  height: 33px;
+  color: peru;
+  fill: currentColor;
+}
+#city-current:hover {
+  color: violet;
+}
+.btn-light {
+  border: 0.8px rgb(199, 206, 207) solid;
+  color: #878787;
+}
+.btn-light:hover {
+  color: #ffffff;
+  background-color: rgba(212, 225, 233, 0.952);
+}
