@@ -4,12 +4,12 @@ import "./Overview.css";
 export default function Overview() {
   return (
     <div className="Overview">
-      <h1 id="city">London</h1>
+      <h1 className="city">London</h1>
       <ul>
         <li>
-          Last updated: <span id="date">Saturday 13:30</span>
+          Last updated: <span className="date">Saturday 13:30</span>
         </li>
-        <li id="description">Broken clouds</li>
+        <li className="description">Broken clouds</li>
       </ul>
     </div>
   );
