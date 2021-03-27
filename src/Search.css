@@ -1,11 +1,11 @@
-#city-current {
+.city-current {
   margin-right: 10px;
   width: 35px;
   height: 33px;
   color: peru;
   fill: currentColor;
 }
-#city-current:hover {
+.city-current:hover {
   color: violet;
 }
 .btn-light {
