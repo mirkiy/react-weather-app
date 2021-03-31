@@ -1,4 +1,4 @@
-.Overview {
+.first-overview {
   margin-bottom: 20px;
 }
 .weather-temperature img {
@@ -6,25 +6,19 @@
   height: 64px;
   width: 64px;
 }
-.weather-temperature strong {
+.Overview .temp {
   color: rgb(33, 33, 33);
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
 }
-.weather-temperature .units {
+.Overview .unit {
   position: relative;
   font-size: 16px;
   top: -34px;
 }
-.weather-temperature .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-}
-.weather-temperature .active:hover {
-  text-decoration: none;
-}
-.weather-forecast {
+
+/* .weather-forecast {
   margin-top: 10px;
 }
 .weather-forecast h3 {
@@ -35,4 +29,4 @@
   height: 15px;
   line-height: 15px;
   padding-top: 7px;
-}
+} */

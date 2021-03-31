@@ -1,16 +1,20 @@
 import React from "react";
 import "./Overview.css";
+import FormattedDate from "./FormattedDate";
+import Temperature from "./Temperature";
 
 export default function Overview(props) {
   return (
     <div className="Overview">
       <h1>{props.data.city}</h1>
-      <ul>
+      <ul className="first-overview">
         <li>
-          Last updated: <span className="date">Saturday 13:30</span>
+          Last updated:
+          <FormattedDate date={props.data.date} />
         </li>
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
+
       <div className="row">
         <div className="col-6">
           <ul>
@@ -27,24 +31,7 @@ export default function Overview(props) {
               className="float-left"
             />
             <div className="float-left">
-              <strong id="temperature">9</strong>
-              <span className="units">
-                <a
-                  href="https://www.bbc.co.uk/weather"
-                  id="celsius-link"
-                  className="active text-decoration-none"
-                >
-                  °C
-                </a>
-                |
-                <a
-                  href="https://www.bbc.co.uk/weather"
-                  id="fahrenheit-link"
-                  className="text-decoration-none"
-                >
-                  °F
-                </a>
-              </span>
+              <Temperature celsius={props.data.temperature} />
             </div>
           </div>
         </div>
