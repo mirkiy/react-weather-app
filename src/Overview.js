@@ -2,6 +2,7 @@ import React from "react";
 import "./Overview.css";
 import FormattedDate from "./FormattedDate";
 import Temperature from "./Temperature";
+import Icon from "./Icon";
 
 export default function Overview(props) {
   return (
@@ -23,13 +24,11 @@ export default function Overview(props) {
           </ul>
         </div>
         <div className="col-6">
-          <div className="clearfix weather-temperature">
-            <img
-              src="https://openweathermap.org/img/wn/03d@2x.png"
-              alt=""
-              id="icon"
-              className="float-left"
-            />
+          <div className="clearfix">
+            <div className="float-left">
+              <Icon code={props.data.icon} size={75} />
+            </div>
+
             <div className="float-left">
               <Temperature celsius={props.data.temperature} />
             </div>

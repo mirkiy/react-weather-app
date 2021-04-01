@@ -1,16 +1,16 @@
 .first-overview {
   margin-bottom: 20px;
 }
-.weather-temperature img {
-  margin-right: 5px;
-  height: 64px;
-  width: 64px;
+.Overview canvas {
+  margin: 10px auto;
+  margin-top: -4px;
 }
 .Overview .temp {
-  color: rgb(33, 33, 33);
-  font-size: 64px;
+  color: #6b6a6a;
+  font-size: 67px;
   line-height: 1;
   font-weight: 400;
+  margin-left: 8px;
 }
 .Overview .unit {
   position: relative;
