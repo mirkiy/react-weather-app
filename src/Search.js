@@ -3,6 +3,7 @@ import "./Search.css";
 import Overview from "./Overview";
 
 import axios from "axios";
+import Forecast from "./Forecast";
 
 export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -11,6 +12,7 @@ export default function Search(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
@@ -30,7 +32,7 @@ export default function Search(props) {
   }
 
   function searching() {
-    const apiKey = "88a366563aa00a334a8bb9a66693ece7";
+    const apiKey = "c00c3900e504f42a171bf56d7e9488fa";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -65,6 +67,7 @@ export default function Search(props) {
           </div>
         </form>
         <Overview data={weatherData} />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {

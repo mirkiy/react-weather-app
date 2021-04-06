@@ -1,0 +1,9 @@
+.Forecast {
+  text-align: center;
+}
+.Forecast-temperature-min {
+  margin-left: 5px;
+}
+.Forecast-temperature-max {
+  font-weight: bold;
+}
