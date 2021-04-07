@@ -8,6 +8,7 @@ import Forecast from "./Forecast";
 export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [unit, setUnit] = useState("celsius");
 
   function handleResponse(response) {
     setWeatherData({
@@ -66,8 +67,8 @@ export default function Search(props) {
             </div>
           </div>
         </form>
-        <Overview data={weatherData} />
-        <Forecast coordinates={weatherData.coordinates} />
+        <Overview data={weatherData} unit={unit} setUnit={setUnit} />
+        <Forecast coordinates={weatherData.coordinates} unit={unit} />
       </div>
     );
   } else {

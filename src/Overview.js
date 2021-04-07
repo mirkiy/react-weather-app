@@ -30,7 +30,11 @@ export default function Overview(props) {
             </div>
 
             <div className="float-left">
-              <Temperature celsius={props.data.temperature} />
+              <Temperature
+                celsius={props.data.temperature}
+                unit={props.unit}
+                setUnit={props.setUnit}
+              />
             </div>
           </div>
         </div>
