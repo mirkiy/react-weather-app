@@ -5,14 +5,14 @@ export default function ForecastDay(props) {
   function maxTemperature() {
     let temperature = Math.round(props.data.temp.max);
     if (props.unit !== "celsius") {
-      temperature = Math.round(temperature * 9) / 5 + 32;
+      temperature = Math.round((temperature * 9) / 5 + 32);
     }
     return `${temperature}°`;
   }
   function minTemperature() {
     let temperature = Math.round(props.data.temp.min);
     if (props.unit !== "celsius") {
-      temperature = Math.round(temperature * 9) / 5 + 32;
+      temperature = Math.round((temperature * 9) / 5 + 32);
     }
     return `${temperature}°`;
   }
