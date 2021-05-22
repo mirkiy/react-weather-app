@@ -11,7 +11,12 @@
   border: 1px solid #dadde1;
   border-radius: 10px;
   box-shadow: 3px 1px 12px#929191;
-  background-image: linear-gradient(to top, #d4d7f8 0%, white 100%);
+  /* background-image: linear-gradient(to top, #d4d7f8 0%, white 100%); */
+  background-image: url("./images/react-weather.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .App:hover {
   box-shadow: 10px 5px 10px rgb(177, 150, 116);
